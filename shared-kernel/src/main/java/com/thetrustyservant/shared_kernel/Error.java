@@ -15,28 +15,32 @@ public class Error {
 		this.type = type;
 	}
 	
-	public static Error Failure(String code, String description)
+	public static Error failure(String code, String description)
 	{
 		return new Error(code, description, ErrorType.FAILURE);
 	}
 
-	public static Error NotFound(String code, String description)
+	public static Error notFound(String code, String description)
 	{
 		return new Error(code, description, ErrorType.NOT_FOUND);
 	}
 
-	public static Error Problem(String code, String description)
+	public static Error problem(String code, String description)
 	{
 		return new Error(code, description, ErrorType.PROBLEM);
 	}
 
-	public static Error Conflict(String code, String description)
+	public static Error conflict(String code, String description)
 	{
 		return new Error(code, description, ErrorType.CONFLICT);
 	}
 
-	public static Error Forbidden(String code, String description)
+	public static Error forbidden(String code, String description)
 	{
 		return new Error(code, description, ErrorType.FORBIDDEN);
+	}
+	public static Error validation(String code, String description)
+	{
+		return new Error(code, description, ErrorType.VALIDATION);
 	}
 }
